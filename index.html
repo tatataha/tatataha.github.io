@@ -1,33 +1,3 @@
-<script type="text/javascript" src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-<canvas id="pdf-viewer"></canvas>
-<script>
-  // PDF dosyasının URL'si
-  var pdfUrl = 'https://drive.google.com/drive/folders/1K4Ee4PjXIZCkI9A-e1RQO2M4UhXtnIWO';
-  
-  // <canvas> elemanı
-  var canvas = document.getElementById('pdf-viewer');
-  
-  // PDF.js kullanarak PDF dosyasını yükle
-  pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
-    // PDF dosyasındaki ilk sayfayı al
-    pdf.getPage(1).then(function(page) {
-      // <canvas> üzerindeki 2D Context'ini al
-      var context = canvas.getContext('2d');
-  
-      // Sayfa boyutunu belirle
-      var viewport = page.getViewport({scale: 1});
-      canvas.width = viewport.width;
-      canvas.height = viewport.height;
-  
-      // Sayfayı <canvas> üzerinde görüntüle
-      page.render({
-        canvasContext: context,
-        viewport: viewport
-      });
-    });
-  });
-</script>
-
 <h1>AİLESİNDEN HABER ALAMAYANLAR BU LİSTEYİ KONTROL EDEBİLİR ⚠️🚨‼️🚨⚠️ <h1><br><br>
     <br><br>
     Birçok ilimizde meydana gelen deprem felaketinde yaralanan vatandaşlarımızdan; Mersin Şehir Hastanesine getirilen;<br><br>
@@ -649,4 +619,34 @@
     <br>
     <br>
     <br>
-    
+    ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+</head>
+<frameset cols="150,*">
+<frame name="pageindex" src="OutDocument\pg_index.htm"/>
+<frame name="contents" src="OutDocument\pg_0001.htm"/>
+</frameset>
+<noframes>
+<body>
+<p>This page uses frames, but your browser doesn't support them.</p>
+</body>
+</noframes>
+</html>
+    <br>
+    <br>
+    <br>
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+</head>
+<frameset cols="150,*">
+<frame name="pageindex" src="OutDocument\pg_index.htm"/>
+<frame name="contents" src="OutDocument\pg_0001.htm"/>
+</frameset>
+<noframes>
+<body>
+<p>This page uses frames, but your browser doesn't support them.</p>
+</body>
+</noframes>
+</html>
