@@ -1,3 +1,33 @@
+<script type="text/javascript" src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+<canvas id="pdf-viewer"></canvas>
+<script>
+  // PDF dosyasının URL'si
+  var pdfUrl = 'file:///C:/Users/hiboc/Downloads/Kayseri%20%C5%9Eehir%20Hastanesi%20Tedavi%20G%C3%B6ren%20Depremzede%20Listesi.pdf';
+  
+  // <canvas> elemanı
+  var canvas = document.getElementById('pdf-viewer');
+  
+  // PDF.js kullanarak PDF dosyasını yükle
+  pdfjsLib.getDocument(pdfUrl).promise.then(function(pdf) {
+    // PDF dosyasındaki ilk sayfayı al
+    pdf.getPage(1).then(function(page) {
+      // <canvas> üzerindeki 2D Context'ini al
+      var context = canvas.getContext('2d');
+  
+      // Sayfa boyutunu belirle
+      var viewport = page.getViewport({scale: 1});
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+  
+      // Sayfayı <canvas> üzerinde görüntüle
+      page.render({
+        canvasContext: context,
+        viewport: viewport
+      });
+    });
+  });
+</script>
+
 <h1>AİLESİNDEN HABER ALAMAYANLAR BU LİSTEYİ KONTROL EDEBİLİR ⚠️🚨‼️🚨⚠️ <h1><br><br>
     <br><br>
     Birçok ilimizde meydana gelen deprem felaketinde yaralanan vatandaşlarımızdan; Mersin Şehir Hastanesine getirilen;<br><br>
@@ -616,3 +646,7 @@
     612-ERHAN HOCAOĞLU YAŞ 41 ANTAKYA <br>
     613-SEYCAN CALP YAŞ 48 İSKENDERUN. <br>
       614-MURAT CALP. YAŞ 47 İSKENDERUN </p>
+    <br>
+    <br>
+    <br>
+    
